@@ -1,4 +1,8 @@
 ---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
 interface Props {
 	title: string;
 }
@@ -23,10 +27,16 @@ const { title } = Astro.props;
 	  
 		  gtag('config', 'G-SS1ZY5WEF3');
 		</script>
-
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</head>
 	<body>
+		<Header />
+
 		<slot />
+		<Footer />
+
 	</body>
 </html>
 <style is:global>
@@ -45,6 +55,7 @@ const { title } = Astro.props;
 		font-family: system-ui, sans-serif;
 		background: #13151a;
 		background-size: 224px;
+		color: white;
 	}
 	code {
 		font-family:
