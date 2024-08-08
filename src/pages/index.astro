@@ -1,13 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-
+import Greeting from '../components/Greeting.jsx';
 const title = "Page d'accueil"
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<h1>{title}</span></h1>
+		<Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 		<p class="instructions">
 			C'est trop la classe
 		</p>
